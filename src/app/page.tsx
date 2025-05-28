@@ -1,6 +1,10 @@
 import { SignOut } from "@/components/sign-out";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
 const Page = async () => {
+  const section =await auth()
+  if(!section)redirect("/sign-up")
   return (
     <>
       <div className="bg-gray-100 rounded-lg p-4 text-center mb-6">
