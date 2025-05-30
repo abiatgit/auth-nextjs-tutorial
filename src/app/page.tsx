@@ -12,7 +12,6 @@ const Page = async () => {
       <div className="bg-gray-100 rounded-lg p-4 text-center mb-6">
         <p className="text-gray-600">Signed in as:</p>
         <p className="font-medium">{section.user?.name}</p>
-        <img src={section.user?.image}></img>
       </div>
 
       <SignOut />
